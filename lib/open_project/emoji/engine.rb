@@ -22,16 +22,16 @@ module OpenProject::Emoji
     include OpenProject::Plugins::ActsAsOpEngine
 
     register 'openproject-emoji',
-             :author_url => 'http://tessenow.org',
-             :requires_openproject => '>= 4.0.0',
-             :global_assets => {js:  'emoji.js',
-                                css: 'emoji.css'}
+             author_url: 'http://tessenow.org',
+             requires_openproject: '>= 4.0.0',
+             global_assets: { js:  'emoji.js',
+                              css: 'emoji.css' }
 
     initializer 'emoji.precompile_assets' do |app|
       app.config.assets.precompile += ['emojify.js', 'emoji.js', 'emoji.css']
     end
 
-    config.to_prepare do |app|
+    config.to_prepare do |_app|
       NonStupidDigestAssets.whitelist << /emojis\/.*\.png/
     end
   end
