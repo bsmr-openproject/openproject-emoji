@@ -6,9 +6,9 @@ require 'open_project/emoji/version'
 Gem::Specification.new do |s|
   s.name        = 'openproject-emoji'
   s.version     = OpenProject::Emoji::VERSION
-  s.authors     = 'Philipp Tessenow'
-  s.email       = 'philipp@tessenow.org'
-  s.homepage    = 'https://github.com/tessi/openproject-emoji'
+  s.authors     = 'OpenProject GmbH'
+  s.email       = 'info@openproject.com'
+  s.homepage    = 'https://community.openproject.org/projects/openproject-emoji'
   s.summary     = 'OpenProject Emoji'
   s.description = 'Displays emoji images in OpenProject :thumbs_up:'
   s.license     = 'GPLv3'
